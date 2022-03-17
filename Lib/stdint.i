@@ -61,10 +61,14 @@ typedef unsigned long long int	uint_least64_t;
 
 /* Signed.  */
 typedef signed char		int_fast8_t;
-#if defined(SWIGWORDSIZE64) && !defined(SWIGINT64ISLONGLONG)
+#if defined(SWIGWORDSIZE64)
 typedef long int		int_fast16_t;
 typedef long int		int_fast32_t;
+#if !defined(SWIGINT64ISLONGLONG)
 typedef long int		int_fast64_t;
+#else
+typedef long long int		int_fast64_t;
+#endif
 #else
 typedef int			int_fast16_t;
 typedef int			int_fast32_t;
@@ -73,10 +77,14 @@ typedef long long int		int_fast64_t;
 
 /* Unsigned.  */
 typedef unsigned char		uint_fast8_t;
-#if defined(SWIGWORDSIZE64) && !defined(SWIGINT64ISLONGLONG)
+#if defined(SWIGWORDSIZE64)
 typedef unsigned long int	uint_fast16_t;
 typedef unsigned long int	uint_fast32_t;
-typedef unsigned long int	uint_fast64_t;
+#if !defined(SWIGINT64ISLONGLONG)
+typedef unsigned long int		uint_fast64_t;
+#else
+typedef unsigned long long int		uint_fast64_t;
+#endif
 #else
 typedef unsigned int		uint_fast16_t;
 typedef unsigned int		uint_fast32_t;
@@ -95,7 +103,7 @@ typedef unsigned int		uintptr_t;
 
 
 /* Largest integral types.  */
-#if defined(SWIGWORDSIZE64) && !defined(SWIGINT64ISLONGLONG)
+#if defined(SWIGWORDSIZE64)
 typedef long int		intmax_t;
 typedef unsigned long int	uintmax_t;
 #else

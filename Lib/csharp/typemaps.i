@@ -77,16 +77,12 @@ INPUT_TYPEMAP(unsigned int,       unsigned int,         uint)
 #if defined(SWIGWORDSIZE64)
 INPUT_TYPEMAP(long,               long,                 long)
 INPUT_TYPEMAP(unsigned long,      unsigned long,        ulong)
-#if defined(SWIGINT64ISLONGLONG)
-INPUT_TYPEMAP(long long,          long long,            long)
-INPUT_TYPEMAP(unsigned long long, unsigned long long,   ulong)
-#endif
 #else
 INPUT_TYPEMAP(long,               long,                 int)
 INPUT_TYPEMAP(unsigned long,      unsigned long,        uint)
+#endif
 INPUT_TYPEMAP(long long,          long long,            long)
 INPUT_TYPEMAP(unsigned long long, unsigned long long,   ulong)
-#endif
 INPUT_TYPEMAP(float,              float,                float)
 INPUT_TYPEMAP(double,             double,               double)
 
@@ -165,16 +161,12 @@ OUTPUT_TYPEMAP(unsigned int,       unsigned int,         uint,     UINT32_PTR)
 #if defined(SWIGWORDSIZE64)
 OUTPUT_TYPEMAP(long,               long,                 long,     INT64_PTR)
 OUTPUT_TYPEMAP(unsigned long,      unsigned long,        ulong,    UINT64_PTR)
-#if defined(SWIGINT64ISLONGLONG)
-OUTPUT_TYPEMAP(long long,          long long,            long,     INT64_PTR)
-OUTPUT_TYPEMAP(unsigned long long, unsigned long long,   ulong,    UINT64_PTR)
-#endif
 #else
 OUTPUT_TYPEMAP(long,               long,                 int,      INT32_PTR)
 OUTPUT_TYPEMAP(unsigned long,      unsigned long,        uint,     UINT32_PTR)
+#endif
 OUTPUT_TYPEMAP(long long,          long long,            long,     INT64_PTR)
 OUTPUT_TYPEMAP(unsigned long long, unsigned long long,   ulong,    UINT64_PTR)
-#endif
 OUTPUT_TYPEMAP(float,              float,                float,    FLOAT_PTR)
 OUTPUT_TYPEMAP(double,             double,               double,   DOUBLE_PTR)
 
@@ -263,16 +255,12 @@ INOUT_TYPEMAP(unsigned int,       unsigned int,         uint,     UINT32_PTR)
 #if defined(SWIGWORDSIZE64)
 INOUT_TYPEMAP(long,               long,                 long,     INT64_PTR)
 INOUT_TYPEMAP(unsigned long,      unsigned long,        ulong,    UINT64_PTR)
-#if defined(SWIGINT64ISLONGLONG)
-INOUT_TYPEMAP(long long,          long long,            long,     INT64_PTR)
-INOUT_TYPEMAP(unsigned long long, unsigned long long,   ulong,    UINT64_PTR)
-#endif
 #else
 INOUT_TYPEMAP(long,               long,                 int,      INT32_PTR)
 INOUT_TYPEMAP(unsigned long,      unsigned long,        uint,     UINT32_PTR)
+#endif
 INOUT_TYPEMAP(long long,          long long,            long,     INT64_PTR)
 INOUT_TYPEMAP(unsigned long long, unsigned long long,   ulong,    UINT64_PTR)
-#endif
 INOUT_TYPEMAP(float,              float,                float,    FLOAT_PTR)
 INOUT_TYPEMAP(double,             double,               double,   DOUBLE_PTR)
 

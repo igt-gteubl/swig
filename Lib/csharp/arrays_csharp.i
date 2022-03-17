@@ -97,16 +97,12 @@ CSHARP_ARRAYS(unsigned int, uint)
 #if defined(SWIGWORDSIZE64)
 CSHARP_ARRAYS(long, long)
 CSHARP_ARRAYS(unsigned long, ulong)
-#if defined(SWIGINT64ISLONGLONG)
-CSHARP_ARRAYS(long long, long)
-CSHARP_ARRAYS(unsigned long long, ulong)
-#endif
 #else
 CSHARP_ARRAYS(long, int)
 CSHARP_ARRAYS(unsigned long, uint)
+#endif
 CSHARP_ARRAYS(long long, long)
 CSHARP_ARRAYS(unsigned long long, ulong)
-#endif
 CSHARP_ARRAYS(float, float)
 CSHARP_ARRAYS(double, double)
 
@@ -178,16 +174,12 @@ CSHARP_ARRAYS_FIXED(unsigned int, uint)
 #if defined(SWIGWORDSIZE64)
 CSHARP_ARRAYS_FIXED(long, long)
 CSHARP_ARRAYS_FIXED(unsigned long, ulong)
-#if defined(SWIGINT64ISLONGLONG)
-CSHARP_ARRAYS_FIXED(long long, long)
-CSHARP_ARRAYS_FIXED(unsigned long long, ulong)
-#endif
 #else
 CSHARP_ARRAYS_FIXED(long, int)
 CSHARP_ARRAYS_FIXED(unsigned long, uint)
+#endif
 CSHARP_ARRAYS_FIXED(long long, long)
 CSHARP_ARRAYS_FIXED(unsigned long long, ulong)
-#endif
 CSHARP_ARRAYS_FIXED(float, float)
 CSHARP_ARRAYS_FIXED(double, double)
 CSHARP_ARRAYS_FIXED(bool, bool)
