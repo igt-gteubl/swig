@@ -540,16 +540,16 @@ SWIGINTERN const char * SWIG_UnpackData(const char *c, void *ptr, size_t sz) {
     ""
 
 %typecheck(SWIG_TYPECHECK_INT64)
-    long,
-    const long &
-    long long,
+    long, 
+    long long, 
+    const long &, 
     const long long &
     ""
 
 %typecheck(SWIG_TYPECHECK_UINT64)
-    unsigned long,
-    const unsigned long &
-    unsigned long long,
+    unsigned long, 
+    unsigned long long, 
+    const unsigned long &, 
     const unsigned long long &
     ""
 #else
