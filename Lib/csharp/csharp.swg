@@ -694,11 +694,11 @@ SWIGINTERN const char * SWIG_UnpackData(const char *c, void *ptr, size_t sz) {
     return ret;
   }
 #if defined(SWIGWORDSIZE64)
-%typemap(csout, excode=SWIGEXCODE) long,          const long &          {
+%typemap(csout, excode=SWIGEXCODE) long,               const long &               {
     long ret = $imcall;$excode
     return ret;
   }
-%typemap(csout, excode=SWIGEXCODE) unsigned long, const unsigned long & {
+%typemap(csout, excode=SWIGEXCODE) unsigned long,      const unsigned long &      {
     ulong ret = $imcall;$excode
     return ret;
   }
@@ -819,12 +819,12 @@ SWIGINTERN const char * SWIG_UnpackData(const char *c, void *ptr, size_t sz) {
       return ret;
     } %}
 #if defined(SWIGWORDSIZE64)
-%typemap(csvarout, excode=SWIGEXCODE2) long,          const long &          %{
+%typemap(csvarout, excode=SWIGEXCODE2) long,               const long &               %{
     get {
       long ret = $imcall;$excode
       return ret;
     } %}
-%typemap(csvarout, excode=SWIGEXCODE2) unsigned long, const unsigned long & %{
+%typemap(csvarout, excode=SWIGEXCODE2) unsigned long,      const unsigned long &      %{
     get {
       ulong ret = $imcall;$excode
       return ret;
